@@ -1,0 +1,171 @@
+body {
+    background-color: #FFF;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+header,
+footer {
+background-color: #2AA8B0;
+}
+header a,
+footer a {
+    color: #000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+header {
+    text-align: center;
+    width: 1440px;
+height: 159.499px;
+flex-shrink: 0;
+     
+}
+.logo{
+    width: 184px;
+height: 97.472px;
+flex-shrink: 0;
+}
+
+nav li{
+  display:inline-block 
+ 
+}
+/*links*/
+a{
+    text-decoration: none;
+}
+
+.explore-button{
+    background-color: #FFFFFF;
+    color:#000
+    
+}
+.intro-text{
+    background-color: #D9D9D9;
+    color: #000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+
+.motivation-text{
+    background-color: #F5F5F5;
+    width: 1440px;
+height: 178px;
+flex-shrink: 0;
+    font-family: verdana,sans-serif;
+    text-align: center;
+    font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+
+.newsletter{
+    background-image:url("../Images/maarten-reinders-vzBb-TnfJGY-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1442px;
+height: 361px;
+flex-shrink: 0;
+
+
+}
+
+.newsletter{
+    color: #FFF;
+
+    text-align: center;
+    font-family: Verdana;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+
+}
+
+.collection{
+    background-color:#F5F5F5;
+
+} 
+.collection-w{
+    width: 560px;
+    height: 873px;
+    flex-shrink: 0; 
+}
+
+.collection-m{
+    width: 560px;
+height: 873px;
+flex-shrink: 0;
+}
+
+.shop-headline{
+    text-align: center;
+}
+
+.prod-description{
+    text-align: center;
+}
+
+.add-to-cart-button{
+    background-color:#2AA8B0 ;
+    color:#000
+}
+
+.checkout-headline{
+    text-align: center;
+}
+
+.contact-us{
+    text-align: center;
+}
+
+.our-story{
+    text-align: center;
+    background-image: url("../Images/matt-chris-pua-wH_-w78v6_4-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1440px;
+height: 923px;
+flex-shrink: 0;
+
+       
+}
+
+.vegard-thomas{
+    text-align: center;
+}
+.portrait-vegard{
+    width: 444px;
+height: 666px;
+flex-shrink: 0;
+}
+
+.portrait-thomas{
+    width: 444px;
+    height: 666px;
+    flex-shrink: 0;  
+}
+
+.brand-phrase{
+    background-color: #D9D9D9;
+    color: #000;
+font-family: Tahoma;
+font-size: 40px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+    width: 209px;
+height: 334px;
+flex-shrink: 0;
+
+}
+footer{
+    width: 1442px;
+    height: 377px;
+    flex-shrink: 0; 
+}
+
+
