@@ -1,0 +1,101 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+main {
+    padding: 20px;
+}
+
+.our-story{
+    background-color: #F3F8FA;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.story-container h1{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.story-container p{
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.story-container h2{
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+.vegard-thomas{
+    background-color: #E8F4F7;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.founders-container p{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+
+
+.founders-images{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+img{
+    max-width: 50%;
+    height: auto;
+    display: block;
+}
+
+.portrait{
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.portrait:hover{
+    transform: scale(1.1);
+}
+
+.brand-phrase{
+    background-color: #2AA8B0;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.brand-container p{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .story-container h1{
+        font-size: 2rem;
+    }
+    .founders-container p{
+        font-size: 1rem;
+    }
+    .portrait{
+        width: 120px;
+        height: 120px;
+    }
+    .brand-container p{
+        font-size: 1.3rem;
+    }
+}

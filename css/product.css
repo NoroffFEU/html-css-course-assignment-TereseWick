@@ -1,0 +1,75 @@
+.product-card-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .product-image-large {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .product-card-details h2 {
+    margin-top: 15px;
+    font-size: 24px;
+  }
+  
+  .product-card-details p {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .back-link {
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration: none;
+    color: #2aa8b0;
+    font-weight: bold;
+  }
+  
+  .back-link:hover {
+    text-decoration: underline;
+  }
+
+  .view-product-link {
+    display: inline-block;
+    background-color: #2aa8b0; /* Your primary color */
+    color: #fff;
+    padding: 12px 24px; /* Make the button-like */
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Soft shadow */
+    transition: all 0.3s ease-in-out; /* Smooth hover effect */
+  }
+  
+  /* Hover effect */
+  .view-product-link:hover {
+    background-color: #1a7e86; /* Darker shade of the primary color */
+    transform: translateY(-3px); /* Slight lifting effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Slightly bigger shadow */
+  }
+  
+  /* Focus effect (for accessibility) */
+  .view-product-link:focus {
+    outline: none; /* Remove the default focus outline */
+    box-shadow: 0 0 0 4px rgba(42, 168, 176, 0.5); /* Custom focus outline */
+  }
+  
+  /* Optional: Style the link when it's disabled or in a specific state */
+  .view-product-link:disabled {
+    background-color: #d3d3d3;
+    color: #a1a1a1;
+    cursor: not-allowed;
+  }

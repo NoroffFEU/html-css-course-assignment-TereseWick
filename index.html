@@ -7,17 +7,16 @@
     <title>Rainydays-Home</title>
     <link href="css/styles.css" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/ae7760c418.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
  </head>
  <body>
     <header>
-      <div>
-        <a href="index.html">
-          <img src="Images/RainyDays_Logo.png" alt="Rainydays" class="logo">
+      <div class="header-container">
+        <a href="index.html" class="logo-link">
+          <img src="Images/RainyDays_Logo.png" alt="Rainydays Logo" class="logo">
           </a>
-        </div>
-        <section>
-        <nav>
-          <ul>
+        <nav class="main-nav">
+          <ul class="nav-list">
             <li><a href="shop.html">Men</a></li>
             <li><a href="shop.html">Woman</a></li>
             <li><a href="shop.html">Outlet</a></li>
@@ -25,78 +24,95 @@
             <li><a href="about.html">About</a></li>
           </ul> 
         </nav>
-        </section>
-      </header>
+        </div>
+
+        <div id="menu">
+          <button id="menubar" onclick="menuBar()" aria-label="Toggle menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+            </svg>
+          </button>
+      
+          <div id="menu-list" style="display: none">
+            <nav>
+            <ul>
+                <li><a href="shop.html?gender=Female" title="shop woman">Woman</a> </li>
+                <li><a href="shop.html?gender=Male" title="shop men">Men</a> </li>
+                <li><a href="shop.html" title="shop outlet">Collection</a> </li>
+                <li><a href="contact.html" title="Contact page">Contact</a> </li>
+                <li><a href="about.html" title="about us">About</a> </li>
+            </ul>
+            </nav>
+            </div>
+            </div>
+       </header>
+
         <main>
         <section class="intro-text">
-          <div>
-   <h1>Pushing The Comfort Zone!</h1> 
-   <p>Check out our selection of rain jackets, guaranteed to keep you dry on wet days.</p>
-   <a href="shop.html" class="explore-button">explore</a>
-   </div>
+       <div class="intrp-container">
+         <h1>Pushing The Comfort Zone!</h1> 
+         <p>Check out our selection of rain jackets, guaranteed to keep you dry on wet days.</p>
+         <a href="shop.html" class="explore-button">explore</a>
+       </div>
 </section>
-  <section class="collection">
-   <div>
-    <h2>womans collection</h2>
-    <img src="Images/eric-gilkes-3BS2ZfUfWyg-unsplash.jpg" alt="woman in rainjacket" class="collection-w">
+
+<section class="collection">
+  <div>
+   <h2>Woman's Collection</h2>
+   <img src="Images/eric-gilkes-3BS2ZfUfWyg-unsplash.jpg" alt="woman in rainjacket" class="collection-w">
+   <a href="shop.html?gender=Female">explore</a>
+  </div>
+  <div>
+   <h2> Men's Collection</h2>
+   <img src="Images/man-4174727_1280.jpg" alt="man in rainjacket" class="collection-m">
+   <a href="shop.html?gender=Male">explore</a>
+  </div> 
+  <div>
+    <h2>Collection</h2>
+    <img src="Images/men:woman:rain.png" alt="woman and man in rainjacket" class="collection-mw">
     <a href="shop.html">explore</a>
-   </div>
-   <div>
-    <h2>mens collection</h2>
-    <img src="Images/man-4174727_1280.jpg" alt="man in rainjacket" class="collection-m">
-    <a href="shop.html">explore</a>
-   </div> 
-  </section> 
+  </div>
+ </section> 
+ 
+ <div id="product-list" class="product-list"></div>
+ <div id="basket-container"></div>
+  
+
   <section class="motivation-text">
     <div>
       <p>DON`T LET ANYTHING STOP YOU FROM BEING ACTIVE AND ADVENTUROUS, WITH RAINYDAYS!</p>
     </div>
   </section> 
-  <section>
-   <h2>Best seller</h2>
-   <div> 
-    <img src="images/RainyDays_Jacket2.jpg" alt="Scott running jacket"/>
-    <h3>Scott running jacket</h3>
-    <p>$120</p>
-    </div>
-    <div>
-      <img src="images/RainyDays_Jacket7.jpg" alt="Scott fleece jacket"/>
-      <h3>Scott fleece jacket</h3>
-      <p>$58</p>
-    </div>
-    <div>
-      <img src="images/RainyDays_Jacket4.jpg" alt="Scott soft shell jacket"/>
-      <h3>Scott soft shell jacket</h3>
-      <p>$100</p>
-    </div>
-   </section>
-   <div class="newsletter">
-    <h2>Newsletter</h2>
-    <a href="contact.html">sign in</a>
-   </div>
+
+ 
+   
    </main>
    <footer>
-    <div>
-   <a href="index.html">Rainydays
+    <div class="footer-container">
+      <div class="footer-logo">
+   <a href="index.html" class="logo-link">
+    <img src="Images/RainyDays_Logo.png" alt="Rainydays Logo" class="logo">
     </a>
-   <ul>
+    </div>
+
+    <div class="footer-links">
+   <ul class="contact-list">
      <li><h3>Contact</h3></li>
      <li><a href="contact.html">Custom service</a></li>
       <li><a href="contact.html">Chat</a></li>
       <li><a href="contact.html">Mail</a></li>
-    </li>
+      <li><a href="about-us.html">About us</a></li>
    </ul>
     </div>
-    <div>
-   <ul>
-    
-     <li><h3>Follow us</h3></li>
-      <li><p>Facebook</p></li>
-      <li><p>Instagram</p></li>
-      <li><p>Linked</p></li>
-    </ul>
-   <a href="about-us.html">About us</a>
+
+    <div class="follow-us">
+      <h2>FOLLOW US</h2>
+     <div class="social-icons">
+      <img src="Images/Icons/Facebook-Icon.png" alt="facebook icon">
+      <img src="Images/Icons/Instagram-Icon.png" alt="instagram icon">
+      </div>
     </div>
-   </footer>
+    </div>
+</footer>
    </body>
    </html>

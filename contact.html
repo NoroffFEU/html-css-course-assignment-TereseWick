@@ -6,69 +6,109 @@
     <meta name="description" content="Contact information,contact Rainydays e-mail, phonenumber"/>
     <title>Rainydays-contact</title>
     <link href="css/styles.css" rel="stylesheet"/>
+    <link href="css/contact.css" rel="stylesheet"/>
+    <script src="script.js" defer></script>
+    <script src="shop.js" defer></script>
  </head>
  <body>
-    <header>
-        <a href="index.html">Rainydays</a>
-        <nav>
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo-link">
+        <img src="Images/RainyDays_Logo.png" alt="Rainydays Logo" class="logo">
+        </a>
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="shop.html?gender=Male">Men</a></li>
+          <li><a href="shop.html?gender=Female">Woman</a></li>
+          <li><a href="shop.html">Collection</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul> 
+      </nav>
+      </div>
+     
+      <div id="menu">
+        <button id="menubar" onclick="menuBar()" aria-label="Toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+          </svg>
+        </button>
+    
+        <div id="menu-list" style="display: none">
+          <nav>
           <ul>
-            <li><a href="shop.html">Men</a></li>
-            <li><a href="shop.html">Woman</a></li>
-            <li><a href="shop.html">Outlet</a></li>
-            <li><a href="contact.html">Contact</a></li>  
-            <li><a href="about.html">About</a></li>
-          </ul> 
-        </nav>
-        
-</header>
-<main>
+              <li><a href="index.html" title="Home">Home</a> </li>
+              <li><a href="shop.html?gender=Female" title="shop woman">Woman</a> </li>
+              <li><a href="shop.html?gender=Male" title="shop men">Men</a> </li>
+              <li><a href="shop.html" title="shop outlet">Collection</a> </li>
+              <li><a href="contact.html" title="Contact page">Contact</a> </li>
+              <li><a href="about.html" title="about us">About</a> </li>
+          </ul>
+          </nav>
+          </div>
+          </div>
+      </header>
+    <main>
     <section class="contact-us">
+      <div class="contact-info">
     <h1><b>Contact us</b></h1>
     <p>We want to give you top customer service, and will be happy to answer you as quickly as possible.</p>
-    <p><b>E-mail: support@rainydays.com</b></p>
-    <p><b>Phone: +47 70 18 30 30</b></p>
+    <p><strong>E-mail:</strong><a href="support@rainydays.com"> support@rainydays.com </a></p>
+    <p><strong>Phone:</strong><a href="tel:47 70 18 30 30"> +47 70 18 30 30 </a></p>
     <p>We have limited phone time 09.00-15.00 Mon- Friday,
         but we are mostly available via chat, e-mail, facebook and
         instagram for large parts of the day.</p>
         <p>You will usually receive a response within 2 working days.</p>
+        </div>
 </section>
-<section>
-    <div>
+
+<section class="contact-form-section">
+    <div class="form-container">
     <h2><b>Or use this  contact form to send us your question.</b></h2>
-    <form>
+    <form class="contact-form">
         <label for="email">Email</label>
-        <input type="email" id="email" name="Email"/>
+        <input type="email" id="email" name="email" required placeholder="Enter your email"/>
+
         <label for="subject">Subject</label>
-        <input type="subject" id="text" name="Subject"/>
+        <input type="subject" id="text" name="subject" required placeholder="Enter the subject"/>
+
         <label for="description">Description</label>
-        <textarea id="description" name="Description" ></textarea>
-        <input type="submit" value="Send"/>
+        <textarea id="description" name="description" rows="5" required placeholder="Write your message"></textarea>
+
+        <input type="submit" value="Send" class=" submit-button"/>
     </form>
     </div>
 </section>
 
 </main>
-   <footer>
-    <div>
-   <a href="index.html">Rainydays</a>
-   <ul>
-     <li><h3>Contact</h3></li>
-     <li><a href="contact.html">Custom service</a></li>
-      <li><a href="contact.html">Chat</a></li>
-      <li><a href="contact.html">Mail</a></li>
-    </li>
-   </ul>
+<footer>
+  <div class="footer-container">
+    <div class="footer-logo">
+ <a href="index.html" class="logo-link">
+  <img src="Images/RainyDays_Logo.png" alt="Rainydays Logo" class="logo">
+  </a>
+  </div>
+
+  <div class="footer-links">
+ <ul class="contact-list">
+   <li><h3>Contact</h3></li>
+   <li><a href="contact.html">Custom service</a></li>
+    <li><a href="contact.html">Chat</a></li>
+    <li><a href="contact.html">Mail</a></li>
+    <li><a href="about-us.html">About us</a></li>
+ </ul>
+  </div>
+
+  <div class="follow-us">
+    <h2>FOLLOW US</h2>
+   <div class="social-icons">
+    <img src="Images/Icons/Facebook-Icon.png" alt="facebook icon">
+    <img src="Images/Icons/Instagram-Icon.png" alt="instagram icon">
     </div>
-    <div>
-   <ul>
-    
-     <li><h3>Follow us</h3></li>
-      <li><p>Facebook</p></li>
-      <li><p>Instagram</p></li>
-      <li><p>Linked</p></li>
-    </ul>
-   <a href="about-us.html">About us</a>
-    </div>
-   </footer>
-   </body>
-   </html>
+  </div>
+  </div>
+</footer>
+ </body>
+ </html>
+   
