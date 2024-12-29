@@ -7,8 +7,9 @@
     <title>Rainydays-checkout</title>
     <link href="css/styles.css" rel="stylesheet"/>
     <link href="css/checkout.css" rel="stylesheet"/>
-    <script src="script.js" defer></script>
-    <script src="basket.js" defer></script>
+   <script src="script.js" defer></script>
+   <script src="checkout.js" defer></script>
+   <script src="cart.js" defer></script>
    </head>
  <body>
     <header>
@@ -29,7 +30,7 @@
 
           <div id="menu">
             <button id="menubar" onclick="menuBar()" aria-label="Toggle menu">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
               </svg>
             </button>
@@ -48,8 +49,16 @@
               </div>
         </header>
 <main>
-   <h1>Your basket</h1>
-   <div id="basket-container"></div>
+
+   <h1>Checkout</h1>
+
+   <div id="cart-summary">
+    <h2>Order Summary</h2>
+    <div id="cartItems"></div>
+    <div class="total">
+      <h3>Total: $<span id="total"></span></h3>
+   </div>
+   </div>
    
 
 <section class="form-section">
@@ -123,7 +132,7 @@
   </section>
 
         <div>
-            <a href="orderconfirm.html" >Check out</a>
+            <a href="orderconfirm.html" class="checkout-button" >Check out</a>
         </div>
    
 

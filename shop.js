@@ -53,8 +53,15 @@ function displayProducts(products) {
       <h2 class="product-title">${product.title}</h2>
       <p class="product-description">${product.description}</p>
       <p class="product-price">$${product.price.toFixed(2)}</p>
-      <button class="add-to-cart-button" data-product-id="${product.id}">Add to Cart</button>
       <a href="product.html?id=${product.id}" class="view-product-link">View Product</a>
+      <button class="add-to-cart-button" data-product-id="${product.id}"
+        data-product-title="${product.title}" data-product-price="${product.price}"
+        data-product-id="${product.id}"
+            data-product-title="${product.title}"
+            data-product-price="${product.price}"
+            data-product-image="${product.image.url}"
+            data-product-alt="${product.image.alt}"
+            >Add to Cart</button>
     `;
 
     productList.appendChild(productCard);
@@ -113,3 +120,57 @@ function menuBar() {
     return;
   }
 }
+
+const addToCartButtons = document.querySelectorAll(".add-to-cart-button");
+addToCartButtons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    const productId = event.target.dataset.productId;
+    const productTitle = event.target.dataset.productTitle;
+    const productPrice = parseFloat(event.target.dataset.productPrice);
+
+    addToCart({ id: productId, title: productTitle, price: productPrice });
+  });
+});
+
+
+// Add product to the cart
+function addToCart(product) {
+cart.push(product);
+total += product.price;
+updateCartUI();
+}
+
+// Remove product from the cart
+function removeFromCart(index) {
+const product = cart[index];
+if (product) {
+  total -= product.price;
+  cart.splice(index, 1);
+  updateCartUI();
+}
+}
+
+
+function updateCartUI() {
+  const cartItemsContainer = document.getElementById("cartItems");
+  const cartCount = document.getElementById("cart-count");
+  const totalContainer = document.getElementById("total");
+
+  cartCount.textContent = cart.length;
+
+  if (cart.length === 0) {
+    cartItemsContainer.innerHTML = "Your cart is empty";
+  } else {
+    cartItemsContainer.innerHTML = cart
+      .map((item, index) => `
+        <div class="cart-item">
+          <p>${item.title} - $${item.price.toFixed(2)}</p>
+          <button class="remove-item" onclick="removeFromCart(${index})">Remove</button>
+        </div>
+      `)
+      .join("");
+  }
+
+  totalContainer.textContent = `$ ${total.toFixed(2)}`;
+}
+

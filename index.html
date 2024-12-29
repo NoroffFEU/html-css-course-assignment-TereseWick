@@ -8,6 +8,7 @@
     <link href="css/styles.css" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/ae7760c418.js" crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
+    <script src="cart.js" defer></script>
  </head>
  <body>
     <header>
@@ -28,7 +29,7 @@
 
         <div id="menu">
           <button id="menubar" onclick="menuBar()" aria-label="Toggle menu">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
             </svg>
           </button>
@@ -45,11 +46,30 @@
             </nav>
             </div>
             </div>
+
+            <div class="shopping_cart" id="cart-icon"><i class="fa-solid fa-cart-shopping"></i><p id="cart-count">0</p></div>
+
+            <div class="shopping_container">
+              <div id="root"></div>
+              <div class="sidebar" id="cart-sidebar">
+                <div class="head"><p>My Cart</p></div>
+                <div id="cartItems">Your cart is emty</div>
+                <div class="foot">
+                  <h3>Total:</h3>
+                  <h2 id="total">$ 0.00</h2>
+                </div>
+                <div class="checkout-container">
+                  <a href="checkout.html" class="checkout-button">Proceed to Checkout</a>
+                </div>
+              </div>
+            </div>
+              <div id="sidebar-overlay"></div>
+            
        </header>
 
         <main>
         <section class="intro-text">
-       <div class="intrp-container">
+       <div class="intro-container">
          <h1>Pushing The Comfort Zone!</h1> 
          <p>Check out our selection of rain jackets, guaranteed to keep you dry on wet days.</p>
          <a href="shop.html" class="explore-button">explore</a>
