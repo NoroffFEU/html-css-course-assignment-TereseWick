@@ -1,15 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Example Title, replace me!</title>
-  <link rel="stylesheet" href="src/css/styles.css">
-</head>
-<body class="centered">
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rainydays homepage,links to the men/woman/outlet collection, best selling products"/>
+    <title>Rainydays-Home</title>
+    <link href="css/styles.css" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/ae7760c418.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+    <script src="cart.js" defer></script>
+ </head>
+ <body>
+    <header>
+      <div class="header-container">
+        <a href="index.html" class="logo-link">
+          <img src="Images/RainyDays_Logo.png" alt="Rainydays Logo" class="logo">
+          </a>
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li><a href="shop.html">Men</a></li>
+            <li><a href="shop.html">Woman</a></li>
+            <li><a href="shop.html">Outlet</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul> 
+        </nav>
+        </div>
+
+        <div id="menu">
+          <button id="menubar" onclick="menuBar()" aria-label="Toggle menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+            </svg>
+          </button>
+      
+          <div id="menu-list" style="display: none">
+            <nav>
+            <ul>
+                <li><a href="shop.html?gender=Female" title="shop woman">Woman</a> </li>
+                <li><a href="shop.html?gender=Male" title="shop men">Men</a> </li>
+                <li><a href="shop.html" title="shop outlet">Collection</a> </li>
+                <li><a href="contact.html" title="Contact page">Contact</a> </li>
+                <li><a href="about.html" title="about us">About</a> </li>
+            </ul>
+            </nav>
+            </div>
+            </div>
+
+            <div class="shopping_cart" id="cart-icon"><i class="fa-solid fa-cart-shopping"></i><p id="cart-count">0</p></div>
+
+            <div class="shopping_container">
+              <div id="root"></div>
+              <div class="sidebar" id="cart-sidebar">
+                <div class="head"><p>My Cart</p></div>
+                <div id="cartItems">Your cart is emty</div>
+                <div class="foot">
+                  <h3>Total:</h3>
+                  <h2 id="total">$ 0.00</h2>
+                </div>
+                <div class="checkout-container">
+                  <a href="checkout.html" class="checkout-button">Proceed to Checkout</a>
+                </div>
+              </div>
+            </div>
+              <div id="sidebar-overlay"></div>
+            
+       </header>
+
+        <main>
+        <section class="intro-text">
+       <div class="intro-container">
+         <h1>Pushing The Comfort Zone!</h1> 
+         <p>Check out our selection of rain jackets, guaranteed to keep you dry on wet days.</p>
+         <a href="shop.html" class="explore-button">explore</a>
+       </div>
+</section>
+
+<section class="collection">
   <div>
-    <img src="/assets/images/noroff-logo.png" alt="Noroff Logo">
-    <h1>Hello World!</h1>
+   <h2>Woman's Collection</h2>
+   <img src="Images/eric-gilkes-3BS2ZfUfWyg-unsplash.jpg" alt="woman in rainjacket" class="collection-w">
+   <a href="shop.html?gender=Female">explore</a>
   </div>
-</body>
-</html>
+  <div>
+   <h2> Men's Collection</h2>
+   <img src="Images/man-4174727_1280.jpg" alt="man in rainjacket" class="collection-m">
+   <a href="shop.html?gender=Male">explore</a>
+  </div> 
+  <div>
+    <h2>Collection</h2>
+    <img src="Images/men:woman:rain.png" alt="woman and man in rainjacket" class="collection-mw">
+    <a href="shop.html">explore</a>
+  </div>
+ </section> 
+ 
+ <div id="product-list" class="product-list"></div>
+ <div id="basket-container"></div>
+  
+
+  <section class="motivation-text">
+    <div>
+      <p>DON`T LET ANYTHING STOP YOU FROM BEING ACTIVE AND ADVENTUROUS, WITH RAINYDAYS!</p>
+    </div>
+  </section> 
+
+ 
+   
+   </main>
+   <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+   <a href="index.html" class="logo-link">
+    <img src="Images/RainyDays_Logo.png" alt="Rainydays Logo" class="logo">
+    </a>
+    </div>
+
+    <div class="footer-links">
+   <ul class="contact-list">
+     <li><h3>Contact</h3></li>
+     <li><a href="contact.html">Custom service</a></li>
+      <li><a href="contact.html">Chat</a></li>
+      <li><a href="contact.html">Mail</a></li>
+      <li><a href="about-us.html">About us</a></li>
+   </ul>
+    </div>
+
+    <div class="follow-us">
+      <h2>FOLLOW US</h2>
+     <div class="social-icons">
+      <img src="Images/Icons/Facebook-Icon.png" alt="facebook icon">
+      <img src="Images/Icons/Instagram-Icon.png" alt="instagram icon">
+      </div>
+    </div>
+    </div>
+</footer>
+   </body>
+   </html>

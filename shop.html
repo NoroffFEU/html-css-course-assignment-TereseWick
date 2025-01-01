@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Men and woman collection of rain jackets from Rainydays"/>
+    <title>Rainydays-Shop</title>
+    <link href="css/styles.css" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/ae7760c418.js" crossorigin="anonymous"></script>
+    <script src="shop.js" defer></script>
+    <script src="cart.js" defer></script>
+ </head>
+ <body>
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo-link">
+        <img src="Images/RainyDays_Logo.png" alt="Rainydays Logo" class="logo">
+        </a>
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html?gender=Male">Men</a></li>
+          <li><a href="shop.html?gender=Female">Woman</a></li>
+          <li><a href="shop.html">Collection</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul> 
+      </nav>
+      </div>
+
+      <div id="menu">
+        <button id="menubar" onclick="menuBar()" aria-label="Toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+          </svg>
+        </button>
+    
+        <div id="menu-list" style="display: none">
+          <nav>
+          <ul>
+              <li><a href="index.html" title="Home">Home</a> </li>
+              <li><a href="shop.html?gender=Female" title="shop woman">Woman</a> </li>
+              <li><a href="shop.html?gender=Male" title="shop men">Men</a> </li>
+              <li><a href="shop.html" title="shop outlet">Collection</a> </li>
+              <li><a href="contact.html" title="Contact page">Contact</a> </li>
+              <li><a href="about.html" title="about us">About</a> </li>
+          </ul>
+          </nav>
+          </div>
+          </div>
+
+          <div class="shopping_cart" id="cart-icon"><i class="fa-solid fa-cart-shopping"></i><p id="cart-count">0</p></div>
+
+            <div class="shopping_container">
+              <div id="root"></div>
+              <div class="sidebar" id="cart-sidebar">
+                <div class="head"><p>My Cart</p></div>
+                <div id="cartItems">Your cart is emty</div>
+                <div class="foot">
+                  <h3>Total:</h3>
+                  <h2 id="total">$ 0.00</h2>
+                </div>
+                <div class="checkout-container">
+                  <a href="checkout.html" class="checkout-button">Proceed to Checkout</a>
+                </div>
+              </div>
+            </div>
+            <div id="sidebar-overlay"></div>
+    </header>
+<main>
+      <div>
+    <h1>Shop Our Collection</h1>
+    </div>
+
+    <div class="filter-container">
+      <button onclick="filterProducts('all')">All</button>
+      <button onclick="filterProducts('Male')">Men</button>
+      <button onclick="filterProducts('Female')">Women</button>
+    </div>
+  
+    <section id="product-list" class="product-list"></section>
+    <div id="basket-container"></div>
+    
+    
+            
+</main>
+<footer>
+  <div class="footer-container">
+    <div class="footer-logo">
+ <a href="index.html" class="logo-link">
+  <img src="Images/RainyDays_Logo.png" alt="Rainydays Logo" class="logo">
+  </a>
+  </div>
+
+  <div class="footer-links">
+ <ul class="contact-list">
+   <li><h3>Contact</h3></li>
+   <li><a href="contact.html">Custom service</a></li>
+    <li><a href="contact.html">Chat</a></li>
+    <li><a href="contact.html">Mail</a></li>
+    <li><a href="about-us.html">About us</a></li>
+ </ul>
+  </div>
+
+  <div class="follow-us">
+    <h2>FOLLOW US</h2>
+   <div class="social-icons">
+    <img src="Images/Icons/Facebook-Icon.png" alt="facebook icon">
+    <img src="Images/Icons/Instagram-Icon.png" alt="instagram icon">
+    </div>
+  </div>
+  </div>
+</footer>
+ </body>
+ </html>
+   
